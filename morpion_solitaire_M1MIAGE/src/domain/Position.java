@@ -1,5 +1,11 @@
 package domain;
 
+/**
+ * The Position class represents a position on the game grid with x and y coordinates.
+ */
+
+
+
 public class Position {
 	private int x;
     private int y;

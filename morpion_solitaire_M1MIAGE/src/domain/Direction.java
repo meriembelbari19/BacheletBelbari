@@ -1,5 +1,12 @@
 package domain;
 
+
+/**
+ * The Direction enum represents the possible directions in which a cell can be aligned with another cell.
+ * It contains the x and y offsets for each direction.
+ */
+
+
 public enum Direction {
     VERTICAL(0,-1),
     HORIZONTAL(-1,0),

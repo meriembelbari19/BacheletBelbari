@@ -9,7 +9,9 @@ package domain;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-
+/**
+ * The Fenetre class represents a window that displays the game board, score, and buttons for interacting with the game.
+ */
 
 	public class Fenetre extends JFrame {
 
@@ -27,6 +29,13 @@ import java.awt.event.ActionListener;
 		private JButton button2 = new JButton("Launch AI");
 		private JButton button3 = new JButton("Switch to 5D");
 
+		
+		
+		/**
+		 * Constructs a new Fenetre object and sets up the window, game board, score label, and buttons.
+		 */
+		
+		
 		public Fenetre() {
 
 			super("Morpion solitaire");
@@ -61,6 +70,13 @@ import java.awt.event.ActionListener;
 			setVisible(true);
 		}
 
+		
+		/**
+		 * The main method launches the Fenetre window.
+		 * @param args Command line arguments
+		 */		
+		
+		
 		public static void main(String[] args) {
 			JFrame fenetre = new Fenetre();
 		}
