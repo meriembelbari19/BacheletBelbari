@@ -124,6 +124,14 @@ public class Board extends JPanel implements MouseListener {
 		this.addCross(new Position(16, 11));
 	}
 
+	
+	
+	
+	
+	/**
+	 * Paints the game board, including the lines, crosses, and aligned cells.
+	 * @param g The Graphics object used to paint the components
+	 */
 
 	@Override
 	public void paint(Graphics g) {
@@ -166,6 +174,17 @@ public class Board extends JPanel implements MouseListener {
 		return true;
 	}
 
+	
+	/**
+	 * Checks for a sequence of aligned cells in a given direction from a starting position.
+	 * @param p The starting position
+	 * @param d The direction in which to check for aligned cells
+	 * @param nbAlignedPoint The minimum number of aligned cells required
+	 * @return A list of aligned cells, or an empty list if there are less than nbAlignedPoint aligned cells
+	 */
+	
+	
+	
 	public ArrayList<Cell> checkPointsByDirection(Position p, Direction d, int nbAlignedPoint) {
 
 		int x = p.getX();
@@ -198,6 +217,13 @@ public class Board extends JPanel implements MouseListener {
 		return alignedCells;
 	}
 
+	
+	
+	/**
+	 * Adds a cross to a cell at a given position, and checks for a sequence of aligned cells in all directions.
+	 * If a sequence of at least nbAlignmentAuthorized aligned cells is found, the cells are added to the list of aligned cells.
+	 * @param p The position at which to add the cross
+	 */
 
 	public void addCheckingCross(Position p) {
 
@@ -275,7 +301,11 @@ public class Board extends JPanel implements MouseListener {
 		repaint();
 	}
 	
-
+	/**
+	 * Adds a cross token to the specified position in the grid.
+	 *
+	 * @param position the position to add the cross token to
+	 */
 	public void addCross(Position p) {
 
 		if (p.getX() >= 0 && p.getX() < size && p.getY() >= 0 && p.getY() < size) {			
@@ -285,6 +315,14 @@ public class Board extends JPanel implements MouseListener {
 		}
 	}
 
+	
+	
+	/**
+	 * Launches the best artificial intelligence in the world to play the game. The AI adds crosses to the game board
+	 * in positions where it can create a sequence of at least nbAlignmentAuthorized aligned cells. If no such position is found,
+	 * the AI stops playing.
+	 */
+	
 
 	public void launchBestAIInTheWorld() {
 
