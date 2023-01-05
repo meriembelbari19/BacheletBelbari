@@ -14,14 +14,12 @@ import java.util.ArrayList;
 public class Cell {
 	
 	private boolean hasCross;
-	private int linecount;
     private ArrayList<Direction> alignementDirection;
     private Position position;
 	
 
     public Cell(Position position) {
         this.hasCross = false;
-        this.linecount = 0;
         this.alignementDirection = new ArrayList<Direction>();
         this.position = position;
     } 
@@ -34,13 +32,6 @@ public class Cell {
         this.hasCross = hasCross;
     }
     
-    public int getLineCount() {
-    	return this.linecount;
-    }
-    
-    public void setLineCount(int a) {
-    	this.linecount = a;
-    }
 
     public void addAlignementDirection(Direction direction) {
         this.alignementDirection.add(direction);
